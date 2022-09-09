@@ -1,0 +1,19 @@
+{
+  "name": "generateteamprofile",
+  "version": "1.0.0",
+  "description": "creating a team profile page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayaneey/GenerateTeamProfile.git"
+  },
+  "author": "ayaneey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayaneey/GenerateTeamProfile/issues"
+  },
+  "homepage": "https://github.com/ayaneey/GenerateTeamProfile#readme"
+}
