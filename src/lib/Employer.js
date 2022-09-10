@@ -6,32 +6,32 @@ class Employer {
     this.id = id;
     this.email = email;
   }
-}
 
-// return name from input 
+  // return name from input
 
-getName(){
+  getName() {
     return this.name;
-}
+  }
 
-// return id from input 
+  // return id from input
 
-getId(){
+  getId() {
     return this.id;
-}
+  }
 
-// return email from input 
+  // return email from input
 
-getEmail(){
+  getEmail() {
     return this.email;
+  }
+
+  // return employee type from input
+
+  getRole() {
+    return "Employee";
+  }
 }
 
-// return employee type from input 
-
-getRole(){
-    return 'Employee';
-}
-
-// Export 
+// Export
 
 module.exports = Employee;
