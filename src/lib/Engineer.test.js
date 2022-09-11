@@ -4,14 +4,13 @@ describe("Engineer", () => {
   const name = "Tom Hanks";
   const id = 310;
   const email = "tomHanks@gmail.com";
-  const github = "TomHanks";
-  const returnGithub = `<a href="https://github.com/${github}">https://github.com/${github}</a>`
+  const github = "ayaneey";
   const role = "Engineer";
 
   const testEngineer = new Engineer(name, id, email, github);
 
-  it("Return Employee Github page when requested", () => {
-    expect(testEngineer.getGitHub()).toBe(returnGithub);
+  it("Return Engineer Github page when requested", () => {
+    expect(testEngineer.getGitHub()).toBe(github);
   });
 
   it("Return Engineer name when requested", () => {
