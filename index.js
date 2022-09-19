@@ -1,20 +1,8 @@
-//const teamProfile = require("./src/index.js");
-
-// import fetch from "node-fetch"
-
-//const dist = path.join(dist, "teamProfile.html");
-// const {
-//   Manager_HTML
-// } = require('./dist/index')
 
 //  Imports
 
 const path = require("path");
-// import { fileURLToPath } from "url";
-// import { dirname } from "path";
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
 
 // Profiles
 
@@ -31,28 +19,7 @@ const teamMembers = [];
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// User Journey
 
-// inquirer
-//   .prompt([
-//     {
-//       type: "list",
-//       name: "addEmployer",
-//       message: "Add an employee or select 'Exit'.",
-//       choices: ["Manager", "Engineer", "Intern", "Exit"],
-//     },
-//   ])
-//   .then(function (data) {
-//     const employeeRole = data.addEmployee;
-//     if (employeeRole === "Manager") {
-//       managerInfo();
-//     } else if (employeeRole === "Engineer") {
-//       EngineerInfo();
-//     } else if (employeeRole === "Intern") {
-//       internInfo();
-//     } else if (employeeRole === "Exit") {
-//     }
-//   });
 
 // Manager Prompt Questions
 
@@ -286,7 +253,7 @@ const promptIntern = () => {
 const finishTeam = () => {
   console.log("Team Built!");
 
-  fs.writeFileSync(outputPath, generateTeam(teamMembers), "UTF-8");
+  fs.writeFileSync(outputPath,generateTeam(teamMembers), "UTF-8");
 };
 
 promptManager();
