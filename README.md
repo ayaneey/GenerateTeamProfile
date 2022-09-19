@@ -9,7 +9,6 @@ The purpose of this application was to generate a team profile taking in user in
 - [UserStory](#UserStory)
 - [Technologies](#Technologies)
 - [Installation](#Installation)
-- [Screenshot](#Screenshot)
 - [WalkThrough](#WalkThrough)
 - [Github](#Github)
 - [Email](#Email)
