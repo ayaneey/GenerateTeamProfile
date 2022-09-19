@@ -55,6 +55,9 @@ SO THAT I have quick access to their emails and GitHub profiles
 ### Screenshot 📸
 
 See below an earlier demo of the app I have made, using the stylesheet I generated for the HTML page.
+<br>
+![screenshot](https://user-images.githubusercontent.com/108099259/191124105-f5f49c12-78a4-4b50-9ff1-3c794d6886c5.png)
+
 
 ### WalkThrough
 
