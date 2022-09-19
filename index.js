@@ -9,18 +9,18 @@
 
 //  Imports
 
-import path from "path";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
+const path = require("path");
+// import { fileURLToPath } from "url";
+// import { dirname } from "path";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 
 // Profiles
 
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
-const Intern = requestAnimationFrame("./lib/Intern");
+const Intern = require("./lib/Intern");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "teamProfile.html");
 const generateTeam = require("./lib/GenerateHTML");
