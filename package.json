@@ -2,9 +2,11 @@
   "name": "generateteamprofile",
   "version": "1.0.0",
   "description": "creating a team profile page",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,8 @@
   },
   "homepage": "https://github.com/ayaneey/GenerateTeamProfile#readme",
   "dependencies": {
-    "inquirer": "^9.1.1"
+    "inquirer": "^9.1.1",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "jest": "^29.0.2"

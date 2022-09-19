@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --glossy-grape: #9c89b8ff;
+  --kobi: #f0a6caff;
+  --pink-lavender: #efc3e6ff;
+  --lavender-blush: #f0e6efff;
+  --light-periwinkle: #b8beddff;
+}
+
+/* --------------- Navbar styling -------------------- */
+
+#navbar {
+  background-color: var(--pink-lavender);
+}
+
+.title-container {
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  height: 10vh;
+}
+
+/* ---------------------- team card--------------------- */
+.team-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+.key-info {
+  font-size: 18px;
+  align-items: center;
+}
+
+.manager-card {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+  width: 15rem;
+  height: 40vh;
+  text-align: center;
+  font-size: 20px;
+}
+
+.engineer-card {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+  width: 15rem;
+  height: 40vh;
+  text-align: center;
+  font-size: 20px;
+}
+
+.intern-card {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+  width: 15rem;
+  height: 40vh;
+  text-align: center;
+  font-size: 20px;
+}
+
+.team-container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+/* Footer */
+
+.contact {
+  background-color: var(--lavender-blush);
+  align-items: center;
+}
+
+.contact-us {
+  text-align: center;
+  font-size: 20px;
+}
+
+.text {
+  font-size: 16px;
+}
