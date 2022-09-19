@@ -18,18 +18,18 @@ const __dirname = dirname(__filename);
 
 // Profiles
 
-const Manager = import("./lib/Manager");
-const Engineer = import("./lib/Engineer");
-const Intern = import("./lib/Intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = requestAnimationFrame("./lib/Intern");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "teamProfile.html");
-const generateTeam = import("./lib/GenerateHTML");
+const generateTeam = require("./lib/GenerateHTML");
 const teamMembers = [];
 
 // Packages
 
-const inquirer = import("inquirer");
-const fs = import("fs");
+const inquirer = require("inquirer");
+const fs = require("fs");
 
 // User Journey
 
