@@ -6,10 +6,10 @@ The purpose of this application was to generate a team profile taking in user in
 
 ## Table of Contents
 
-- [User](#userstory-📖)
-- [Technologies](#technologies-💻)
-- [Installation](#installation-🛠)
-- [Screenshot](#screenshot-📸)
+- [User](#userstory)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Screenshot](#screenshot)
 - [Walk-Through](#walkthrough)
 - [Github](#github)
 - [Email](#email)
