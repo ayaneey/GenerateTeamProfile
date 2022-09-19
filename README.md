@@ -6,14 +6,14 @@ The purpose of this application was to generate a team profile taking in user in
 
 ## Table of Contents
 
-- [UserStory](#UserStory)
-- [Technologies](#Technologies)
-- [Installation](#Installation)
-- [WalkThrough](#WalkThrough)
-- [Github](#Github)
-- [Email](#Email)
+- [UserStory](#userstory)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [WalkThrough](#walkthrough)
+- [Github](#github)
+- [Email](#email)
 
-## UserStory 📖
+### UserStory 📖
 
 ```md
 AS A manager
@@ -21,7 +21,7 @@ I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
 ```
 
-## Technologies 💻
+### Technologies 💻
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
@@ -33,7 +33,7 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
-## Installation 🛠
+### Installation 🛠
 
 <b>To install, follow the steps below:</b>
 
@@ -52,20 +52,20 @@ SO THAT I have quick access to their emails and GitHub profiles
 4. Now you need to install the required npm packages. Run `npm init` on your terminal. This will set up or intialise a new npm package. From here, you can start using commands that should generate your readMe file. To install all dependencies, then you need to run `npm install`. Ensure you also download Inquirer.js by entering `npm install inquirer ` in your terminal.
    Good luck!👍🏽
 
-## Screenshot 📸
+### Screenshot 📸
 
 See below an earlier demo of the app I have made, using the stylesheet I generated for the HTML page.
 
-## WalkThrough
+### WalkThrough
 
 Attached in the link below is the YouTube video I create demonstrating the demo.
 
 ![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)[CLICK HERE](https://www.youtube.com/watch?v=HxooQZ_XUv4)
 
-## Github
+### Github
 
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) [ayaneey](https://github.com/ayaneey)
 
-## Email
+### Email
 
 You can contact me at [Ayan Ahmed](mailto:ayanahmed0210@gmail.com)
