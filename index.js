@@ -92,7 +92,8 @@ const promptManager = () => {
 };
 
 const promptMenu = () => {
-  return inquirer.prompt([
+  return inquirer
+    .prompt([
       {
         type: "list",
         name: "menu",
@@ -102,10 +103,10 @@ const promptMenu = () => {
     ])
     .then((userInput) => {
       switch (userInput.menu) {
-        case "add engineer":
+        case "Add an Engineer":
           promptEngineer();
           break;
-        case "add intern":
+        case "Add an Intern":
           promptIntern();
           break;
         default:
