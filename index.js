@@ -7,49 +7,57 @@
 //   Manager_HTML
 // } = require('./dist/index')
 
+//  Imports
+
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 // Profiles
 
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const Manager = import("./lib/Manager");
+const Engineer = import("./lib/Engineer");
+const Intern = import("./lib/Intern");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "teamProfile.html");
-const generateTeam = require("./lib/GenerateHTML.js");
+const generateTeam = import("./lib/GenerateHTML");
 const teamMembers = [];
 
 // Packages
 
-const inquirer = require("inquirer");
-const fs = require("fs");
+const inquirer = import("inquirer");
+const fs = import("fs");
 
 // User Journey
 
-inquirer
-  .prompt([
-    {
-      type: "list",
-      name: "addEmployer",
-      message: "Add an employee or select 'Exit'.",
-      choices: ["Manager", "Engineer", "Intern", "Exit"],
-    },
-  ])
-  .then(function (data) {
-    const employeeRole = data.addEmployee;
-    if (employeeRole === "Manager") {
-      managerInfo();
-    } else if (employeeRole === "Engineer") {
-      EngineerInfo();
-    } else if (employeeRole === "Intern") {
-      internInfo();
-    } else if (employeeRole === "Exit") {
-    }
-  });
+// inquirer
+//   .prompt([
+//     {
+//       type: "list",
+//       name: "addEmployer",
+//       message: "Add an employee or select 'Exit'.",
+//       choices: ["Manager", "Engineer", "Intern", "Exit"],
+//     },
+//   ])
+//   .then(function (data) {
+//     const employeeRole = data.addEmployee;
+//     if (employeeRole === "Manager") {
+//       managerInfo();
+//     } else if (employeeRole === "Engineer") {
+//       EngineerInfo();
+//     } else if (employeeRole === "Intern") {
+//       internInfo();
+//     } else if (employeeRole === "Exit") {
+//     }
+//   });
 
 // Manager Prompt Questions
 
 const promptManager = () => {
-  return inquirer
-    .prompt([
+  return inquirer.prompt([
       {
         type: "input",
         name: "name",
@@ -117,8 +125,7 @@ const promptManager = () => {
 };
 
 const promptMenu = () => {
-  return inquirer
-    .prompt([
+  return inquirer.prompt([
       {
         type: "list",
         name: "menu",
@@ -141,8 +148,7 @@ const promptMenu = () => {
 };
 
 const promptEngineer = () => {
-  return inquirer
-    .prompt([
+  return inquirer.prompt([
       {
         type: "input",
         name: "name",
@@ -211,31 +217,76 @@ const promptEngineer = () => {
 
 const promptIntern = () => {
   return inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What is the intern name?",
-      validate: (internName) => {
-        if (internName) {
-          return true;
-        } else {
-          console.log("Please enter the name of the intern!");
-          return false;
-        }
+      {
+        type: "input",
+        name: "name",
+        message: "What is the intern name?",
+        validate: (internName) => {
+          if (internName) {
+            return true;
+          } else {
+            console.log("Please enter the name of the intern!");
+            return false;
+          }
+        },
       },
-    },
-    {
-      type: "input",
-      name: "employeeId",
-      message: "Please enter your employee ID:",
-      validate: (employeeId) => {
-        if (employeeId) {
-          return true;
-        } else {
-          console.log("Please enter your employee Id!");
-          return false;
-        }
+      {
+        type: "input",
+        name: "employeeId",
+        message: "Please enter your employee ID:",
+        validate: (employeeId) => {
+          if (employeeId) {
+            return true;
+          } else {
+            console.log("Please enter your employee Id!");
+            return false;
+          }
+        },
       },
-    },
-  ]);
+      {
+        type: "input",
+        name: "email",
+        message: "Please enter your email address:",
+        validate: (email) => {
+          if (email) {
+            return true;
+          } else {
+            console.log("Please enter your email address!");
+            return false;
+          }
+        },
+      },
+      {
+        type: "input",
+        name: "school",
+        message: "Please enter your school name:",
+        validate: (school) => {
+          if (school) {
+            return true;
+          } else {
+            console.log("Please enter your school name!");
+            return false;
+          }
+        },
+      },
+    ])
+    .then((answers) => {
+      console.log(answers);
+      const intern = new Intern(
+        answers.name,
+        answers.employeeId,
+        answers.email,
+        answers.school
+      );
+      teamMembers.push(intern);
+      promptMenu();
+    });
 };
+
+const finishTeam = () => {
+  console.log("Team Built!");
+
+  fs.writeFileSync(outputPath, generateTeam(teamMembers), "UTF-8");
+};
+
+promptManager();
